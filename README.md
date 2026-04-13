@@ -22,16 +22,20 @@ This project implements a pick and place motion using the Franka Panda robotic a
 1. Source the environment and build:
 
     source /opt/ros/humble/setup.bash
+   
     source ~/ws_moveit2/install/setup.bash
+   
     export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+
     cd ~/project4_ws && colcon build
+
     export AMENT_PREFIX_PATH=~/project4_ws/install/package_122288393:~/project4_ws/install/panda_movit_config:~/project4_ws/install/moveit_resources_panda_description:$AMENT_PREFIX_PATH
 
-2. Terminal 1 - Launch MoveIt demo:
+3. Terminal 1 - Launch MoveIt demo:
 
     ros2 launch panda_movit_config demo.launch.py
 
-3. Terminal 2 - Run pick and place:
+4. Terminal 2 - Run pick and place:
 
     ros2 launch package_122288393 pick_and_place.launch.py
 
